@@ -7,21 +7,19 @@ const Index: React.FC = () => {
   const { t } = useLanguage();
 
   useEffect(() => {
-    const backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/lovable-uploads/49470c43-333e-46ae-b8af-32b2254cd34b.png')`;
+    const backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/lovable-uploads/2207607f-0dc8-416a-9fcc-5c86d828da65.png')`;
     console.log('Background Image URL:', backgroundImage);
     
-    // Create an image to test loading
     const img = new Image();
     img.onload = () => console.log('Image loaded successfully');
     img.onerror = (error) => console.error('Image failed to load:', error);
-    img.src = '/lovable-uploads/49470c43-333e-46ae-b8af-32b2254cd34b.png';
+    img.src = '/lovable-uploads/2207607f-0dc8-416a-9fcc-5c86d828da65.png';
   }, []);
 
   return (
     <>
-      {/* Hero Section */}
       <section className="relative bg-cover bg-center" style={{ 
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/lovable-uploads/49470c43-333e-46ae-b8af-32b2254cd34b.png')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/lovable-uploads/2207607f-0dc8-416a-9fcc-5c86d828da65.png')`,
         height: '600px'
       }}>
         <div className="absolute inset-0 flex items-center justify-center">
@@ -51,7 +49,6 @@ const Index: React.FC = () => {
         </div>
       </section>
 
-      {/* Service Highlights */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -95,7 +92,6 @@ const Index: React.FC = () => {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center">
