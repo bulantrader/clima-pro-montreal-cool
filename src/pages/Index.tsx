@@ -1,11 +1,21 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Fan, AirVent, Wrench, ThumbsUp } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Index: React.FC = () => {
   const { t } = useLanguage();
+
+  useEffect(() => {
+    const backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/lovable-uploads/49470c43-333e-46ae-b8af-32b2254cd34b.png')`;
+    console.log('Background Image URL:', backgroundImage);
+    
+    // Create an image to test loading
+    const img = new Image();
+    img.onload = () => console.log('Image loaded successfully');
+    img.onerror = (error) => console.error('Image failed to load:', error);
+    img.src = '/lovable-uploads/49470c43-333e-46ae-b8af-32b2254cd34b.png';
+  }, []);
 
   return (
     <>
