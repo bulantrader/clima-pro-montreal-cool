@@ -11,7 +11,7 @@ const Index: React.FC = () => {
     <>
       {/* Hero Section */}
       <section className="relative bg-cover bg-center" style={{ 
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1483058712412-4245e9b90334')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/lovable-uploads/49470c43-333e-46ae-b8af-32b2254cd34b.png')`,
         height: '600px'
       }}>
         <div className="absolute inset-0 flex items-center justify-center">
