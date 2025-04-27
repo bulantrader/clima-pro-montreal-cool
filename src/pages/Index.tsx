@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Fan, AirVent, Wrench, ThumbsUp } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
@@ -6,22 +7,11 @@ import { useLanguage } from '../context/LanguageContext';
 const Index: React.FC = () => {
   const { t } = useLanguage();
 
-  useEffect(() => {
-    // Get the last uploaded image path from Lovable uploads
-    const backgroundImagePath = '/lovable-uploads/81707972-c612-4cf5-8a16-8f43060641f6.png';
-    const backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('${backgroundImagePath}')`;
-    console.log('Background Image URL:', backgroundImage);
-    
-    const img = new Image();
-    img.onload = () => console.log('Image loaded successfully');
-    img.onerror = (error) => console.error('Image failed to load:', error);
-    img.src = backgroundImagePath;
-  }, []);
-
   return (
     <>
+      {/* Hero Section */}
       <section className="relative bg-cover bg-center" style={{ 
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/lovable-uploads/81707972-c612-4cf5-8a16-8f43060641f6.png')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1483058712412-4245e9b90334')`,
         height: '600px'
       }}>
         <div className="absolute inset-0 flex items-center justify-center">
@@ -51,6 +41,7 @@ const Index: React.FC = () => {
         </div>
       </section>
 
+      {/* Service Highlights */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -94,6 +85,7 @@ const Index: React.FC = () => {
         </div>
       </section>
 
+      {/* Why Choose Us Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center">
