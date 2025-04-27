@@ -7,19 +7,21 @@ const Index: React.FC = () => {
   const { t } = useLanguage();
 
   useEffect(() => {
-    const backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/lovable-uploads/2207607f-0dc8-416a-9fcc-5c86d828da65.png')`;
+    // Get the last uploaded image path from Lovable uploads
+    const backgroundImagePath = '/lovable-uploads/49470c43-333e-46ae-b8af-32b2254cd34b.png';
+    const backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('${backgroundImagePath}')`;
     console.log('Background Image URL:', backgroundImage);
     
     const img = new Image();
     img.onload = () => console.log('Image loaded successfully');
     img.onerror = (error) => console.error('Image failed to load:', error);
-    img.src = '/lovable-uploads/2207607f-0dc8-416a-9fcc-5c86d828da65.png';
+    img.src = backgroundImagePath;
   }, []);
 
   return (
     <>
       <section className="relative bg-cover bg-center" style={{ 
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/lovable-uploads/2207607f-0dc8-416a-9fcc-5c86d828da65.png')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/lovable-uploads/49470c43-333e-46ae-b8af-32b2254cd34b.png')`,
         height: '600px'
       }}>
         <div className="absolute inset-0 flex items-center justify-center">
