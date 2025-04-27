@@ -8,7 +8,7 @@ const Index: React.FC = () => {
 
   useEffect(() => {
     // Get the last uploaded image path from Lovable uploads
-    const backgroundImagePath = '/lovable-uploads/49470c43-333e-46ae-b8af-32b2254cd34b.png';
+    const backgroundImagePath = '/lovable-uploads/81707972-c612-4cf5-8a16-8f43060641f6.png';
     const backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('${backgroundImagePath}')`;
     console.log('Background Image URL:', backgroundImage);
     
@@ -21,7 +21,7 @@ const Index: React.FC = () => {
   return (
     <>
       <section className="relative bg-cover bg-center" style={{ 
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/lovable-uploads/49470c43-333e-46ae-b8af-32b2254cd34b.png')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/lovable-uploads/81707972-c612-4cf5-8a16-8f43060641f6.png')`,
         height: '600px'
       }}>
         <div className="absolute inset-0 flex items-center justify-center">
