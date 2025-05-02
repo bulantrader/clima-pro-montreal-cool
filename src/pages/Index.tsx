@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Fan, AirVent, Wrench, ThumbsUp } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
@@ -7,11 +7,19 @@ import { useLanguage } from '../context/LanguageContext';
 const Index: React.FC = () => {
   const { t } = useLanguage();
 
+  useEffect(() => {
+    // Preload the image to ensure it's available
+    const img = new Image();
+    img.src = '/lovable-uploads/ea5b872a-fce9-43f9-9a3c-cd894897be60.png';
+    img.onload = () => console.log('Hero background image loaded successfully');
+    img.onerror = (e) => console.error('Error loading hero background image:', e);
+  }, []);
+
   return (
     <>
       {/* Hero Section */}
       <section className="relative bg-cover bg-center" style={{ 
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1483058712412-4245e9b90334')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/lovable-uploads/ea5b872a-fce9-43f9-9a3c-cd894897be60.png')`,
         height: '600px'
       }}>
         <div className="absolute inset-0 flex items-center justify-center">
